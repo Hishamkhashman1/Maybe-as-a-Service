@@ -27,12 +27,12 @@ app.add_middleware(
 )
 
 
+@app.get("/health")
+async def health_check():
+        return {"status": "ok"}
+
 @app.get("/")
-async def root()
-#return frontend landing page
-
-@app.get("/maybe{maybe_id}")
-# return a random maybe when requested
-
+async def root():
+        return {"Message": "Maybe as a Service"}
 
 
